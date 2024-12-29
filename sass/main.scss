@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #4871b8;
+  font-family: "arial";
+  font-weight: 100;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.search_box {
+  width: 520px;
+  height: 60px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  &__input {
+    flex: 1;
+    border: none;
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: arial;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover .search_box--icon {
+      stroke: #5a7fbf;
+      transform: scale(1.1);
+    }
+  }
+  &--icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.suggestion_wrapper {
+  width: 520px;
+  height: 60px;
+  height: max-content;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  margin-top: -8px;
+  padding-top: 10px;
+}
+
+.suggestion {
+  text-align: justify;
+  padding-left: 16px;
+  height: 40px;
+  cursor: pointer;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-out;
+  white-space: pre;
+  &:hover {
+    background-color: #e7e6e6;
+  }
+}
